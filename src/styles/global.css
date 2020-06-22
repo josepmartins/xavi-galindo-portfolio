@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Druk XCond Web';
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: local('Druk XCond Web'), local('Druk-XCond-Web'),
+      url('../fonts/DrukXCond-Super-Web.woff') format('woff');
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #111;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: "Druk XCond Web", sans-serif;
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  color: #111;
+  text-decoration: none;
+}

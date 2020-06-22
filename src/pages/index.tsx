@@ -19,7 +19,6 @@ type Data = {
         frontmatter: {
           title: string
           date: string
-          description: string
         }
         fields: {
           slug: string
@@ -34,28 +33,23 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout title={''} location={location}>
       <SEO title="All posts" />
-      <Bio />
+      {/* <Bio /> */}
+      {/* <h1 style={{fontSize: '75vh'}}>Xavi</h1>
+      <h1 style={{fontSize: '75vh'}}>Galindo</h1> */}
+
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3>
-                <Link to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
+          <article style={{display: 'inline-block'}} key={node.fields.slug}>
+            <h3 style={{display: 'inline-block', fontSize: '25vh'}}>
+              <Link to={node.fields.slug}>
+                {title}
+                {/* <div style={{display: 'inline-block', backgroundColor: '#ddd', height: '100px', width: '120px'}} /> */}
+                {',      '}
+              </Link>
+            </h3>
           </article>
         )
       })}
@@ -82,7 +76,6 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            description
           }
         }
       }
