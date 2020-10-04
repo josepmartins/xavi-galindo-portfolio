@@ -1,31 +1,51 @@
 @font-face {
-  font-family: 'Druk XCond Web';
-  font-weight: 900;
+  font-family: 'Founders';
+  font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  src: local('Druk XCond Web'), local('Druk-XCond-Web'),
-      url('../fonts/DrukXCond-Super-Web.woff') format('woff');
+  src: url('../fonts/founders-grotesk-light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Ogg';
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('../fonts/ogg-light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Druk XCond Web';
+  font-weight: 900;
+  font-stretch: normal;
+  src: url('../fonts/DrukXCond-Super-Web.woff') format('woff');
 }
 
 html {
   font-size: 100%;
+  background: #eee;
 }
 
 body {
   font-family: sans-serif;
   background-color: #fff;
-  color: #111;
+  color: #1A1A1A;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* font-family: "Founders", sans-serif; */
+  font-family: 'Monument Grotesk';
 }
 
 h1, h2, h3 {
-  font-family: "Druk XCond Web", sans-serif;
+  /* font-family: 'Druk XCond Web'; */
+  font-weight: 400;
   margin: 0;
   font-style: normal;
-  font-weight: 400;
+  font-family: 'Monument Grotesk';
+  font-size: 80px;
+  /* font-weight: 500; */
 }
 
 ul{

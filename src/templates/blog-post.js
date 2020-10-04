@@ -8,12 +8,10 @@ import Img from "gatsby-image"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
-  console.log(data.images);
   const { previous, next } = pageContext
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <SEO
         title={post.frontmatter.title}
       />
