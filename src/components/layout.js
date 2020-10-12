@@ -3,18 +3,14 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: 99;
 `
 
 const NavLink = styled.div`
   text-transform: uppercase;
   font-size: 12px;
   cursor: pointer;
+  mix-blend-mode: difference;
+  z-index: 2;
 
   &:hover{
     text-decoration: underline;
@@ -23,7 +19,7 @@ const NavLink = styled.div`
 const WorkWrapper = styled.div`
   position: fixed;
   width: 100vw;
-  top: 2vw;
+  top: 1.5vw;
   left: 0;
   z-index: 999;
   text-align: center;
@@ -31,7 +27,7 @@ const WorkWrapper = styled.div`
 const AboutWrapper = styled.div`
   position: fixed;
   width: 100vw;
-  bottom: 2vw;
+  bottom: 1.5vw;
   left: 0;
   z-index: 999;
   text-align: center;
@@ -108,7 +104,9 @@ const Layout = ({ location, title, children }) => {
               </NavLink>
         </WorkWrapper>
         <AboutWrapper>
-            <NavLink>About</NavLink>
+            <NavLink>
+              <Link to={`/`}>About</Link>
+            </NavLink>
         </AboutWrapper>
         {showResults && (
           <NavigationWrapper>

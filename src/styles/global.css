@@ -34,27 +34,41 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* font-family: "Founders", sans-serif; */
-  font-family: 'Monument Grotesk';
+  font-family: Söhne;
 }
 
 h1, h2, h3 {
-  /* font-family: 'Druk XCond Web'; */
-  font-weight: 400;
   margin: 0;
   font-style: normal;
-  font-family: 'Monument Grotesk';
-  font-size: 80px;
-  /* font-weight: 500; */
-}
-
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  font-family: Söhne;
+  font-size: 74px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -.015em;
+  text-transform: uppercase;
 }
 
 a{
-  color: #111;
+  color: #1A1A1A;
   text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }

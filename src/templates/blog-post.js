@@ -2,9 +2,24 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
+import Slider from "../components/slider"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Img from "gatsby-image"
+import styled from "styled-components"
+
+const TitleWrapper = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`
+const Title = styled.h1`
+
+`
+
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -15,14 +30,17 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <SEO
         title={post.frontmatter.title}
       />
+      <TitleWrapper>
+        <Title>
+          {post.frontmatter.title}
+        </Title>
+      </TitleWrapper>
+      <Slider images={data.images.edges}></Slider>
       <article>
-        <header>
-          {data.images.edges.map(edge =>
-            <Img fluid={edge.node.childImageSharp.fluid} />
-          )}
-          <h1>
-            {post.frontmatter.title}
-          </h1>
+        {/* {data.images.edges.map(edge =>
+          <Img fluid={edge.node.childImageSharp.fluid} />
+        )} */}
+        {/* <header>
           <p>
             {post.frontmatter.date}
           </p>
@@ -30,10 +48,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <footer>
           <Bio />
-        </footer>
+        </footer> */}
       </article>
 
-      <nav>
+      {/* <nav>
         <ul>
           <li>
             {previous && (
@@ -50,7 +68,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             )}
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </Layout>
   )
 }
@@ -69,8 +87,8 @@ export const pageQuery = graphql`
         node {
           name
           childImageSharp {
-            fluid(maxWidth: 200, maxHeight: 200) {
-              ...GatsbyImageSharpFluid
+            fluid( maxHeight: 1000) {
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }

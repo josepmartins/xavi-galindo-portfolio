@@ -7,8 +7,7 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 
 const Title = styled.h1`
-  font-size: 40px;
-  position: fixed;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   text-align: center;
@@ -29,7 +28,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location}>
       <SEO title="All posts" />
       <Title>Xavi Galindo</Title>
-      <ImageWrapper><Img fluid={data.image1.childImageSharp.fluid} /></ImageWrapper>
+      <ImageWrapper><Img style={{ maxHeight: '100%' }} fluid={data.image2.childImageSharp.fluid} /></ImageWrapper>
     </Layout>
   )
 }
