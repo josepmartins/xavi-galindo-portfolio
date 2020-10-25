@@ -27,25 +27,27 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Marcel, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
   background-color: #fff;
   color: #1A1A1A;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: Söhne;
+  font-style: normal;
+  height: 100vh;
+  width: 100vw;
 }
 
 h1, h2, h3 {
   margin: 0;
   font-style: normal;
-  font-family: Söhne;
-  font-size: 74px;
+  font-size: 12vh;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200;
   letter-spacing: -.015em;
-  text-transform: uppercase;
+  line-height: 1;
 }
 
 a{

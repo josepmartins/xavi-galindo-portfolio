@@ -11,7 +11,6 @@ const SliderWrapper = styled.div`
 const Slide = styled.div`
   width: 80vw;
 `
-
 const Button = styled.div`
   position: absolute;
   ${props => props.right ? 'right: 0; cursor: e-resize;' : 'left: 0; cursor: w-resize;' };
@@ -46,7 +45,7 @@ const Slider = ({ images }) => { // takes in images as props
       <SliderWrapper>
         <Slide>
           <Button onClick={slideLeft} />
-          <Img style={{ maxHeight: '87vh' }}  imgStyle={{ objectFit: 'contain' }} placeholderStyle={{ objectFit: 'contain' }} fluid={images[index].node.childImageSharp.fluid} />
+          <Img style={{ maxHeight: '75vh' }}  imgStyle={{ objectFit: 'contain' }} placeholderStyle={{ objectFit: 'contain' }} fluid={images[index].node.childImageSharp.fluid} />
           <Button right onClick={slideRight} />
         </Slide>
       </SliderWrapper>

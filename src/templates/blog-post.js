@@ -17,7 +17,8 @@ const TitleWrapper = styled.div`
   text-align: center;
 `
 const Title = styled.h1`
-
+  font-size: 25vw;
+  text-transform: uppercase;
 `
 
 
